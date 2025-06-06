@@ -14,23 +14,69 @@
         <div class="user">
             <input type="text" id="filter" placeholder="Filter by author name">
             <!-- <button onclick="fetchData()" id="themeToggle">Toggle Theme</button> -->
-            <button onclick="fetchData()" id="themeToggle" aria-label="Toggle theme">🌓</button>
+            <!-- <button onclick="fetchData()" id="themeToggle" aria-label="Toggle theme">🌓</button> -->
+            <button onclick="toggleDarkMode()" id="themeToggle" aria-label="Toggle theme">🌓</button>
             <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;">
         </div>
     </div>
     <div class="main">
-        <div class="loading">
+        <!-- <div class="loading">
             <p>Loading pokemonSprite...</p>
-                <button id="prevButton">Prev</button>
-                <button id="nextButton">Next</button>
-            </div>
+            <button id="prevButton">Prev</button>
+            <button id="nextButton">Next</button>
+        </div> -->
+        <div class="listAnimal">
+            <ul>
+                <li onclick="fetchPokemon('charmander')">Charmander</li>
+                <li onclick="fetchPokemon('charmeleon')">Charmeleon</li>
+                <li onclick="fetchPokemon('raichu')">Raichu</li>
+                <li onclick="fetchPokemon('sandslash')">Sandslash</li>
+                <li onclick="fetchPokemon('nidoking')">Nidoking</li>
+                <li onclick="fetchPokemon('zubat')">Zubat</li>
+                <li onclick="fetchPokemon('persian')">Persian</li>
+                <li onclick="fetchPokemon('venomoth')">Venomoth</li>
+                <li onclick="fetchPokemon('muk')">Muk</li>
+                <li onclick="fetchPokemon('hypno')">Hypno</li>
+            </ul>
         </div>
-        <div id="lightbox" class="lightbox" aria-hidden="true">
-            <button class="lightbox-close" id="closeLightbox" aria-label="Close modal">×</button>
-            <img id="lightboxImage" alt="">
-            <div id="gallery" class="gallery"></div>
+
+        <img id="pokemonSprite" src="" alt="Pokemon Sprite" style="display: none;">
+        <div class="loading">
+            <button id="prevButton" onclick="prev()">Prev</button>
+            <button id="nextButton" onclick="next()">Next</button>
         </div>
-        <script src="script.js"></script>
+    </div>
+    <!-- <div class="loading">
+        <button id="prevButton" onclick="prev()">Prev</button>
+        <button id="nextButton" onclick="next()">Next</button>
+    </div> -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="closeLightbox" aria-label="Close modal">×</button>
+        <img id="lightboxImage" alt="">
+        <div id="gallery" class="gallery"></div>
+    </div>
+    <!-- <div class="listAnimal">
+        <ul>
+            <li onclick="fetchPokemon('charmander')">Charmander</li>
+            <li onclick="fetchPokemon('charmeleon')">Charmeleon</li>
+            <li onclick="fetchPokemon('raichu')">Raichu</li>
+            <li onclick="fetchPokemon('sandslash')">Sandslash</li>
+            <li onclick="fetchPokemon('nidoking')">Nidoking</li>
+            <li onclick="fetchPokemon('zubat')">Zubat</li>
+            <li onclick="fetchPokemon('persian')">Persian</li>
+            <li onclick="fetchPokemon('venomoth')">Venomoth</li>
+            <li onclick="fetchPokemon('muk')">Muk</li>
+            <li onclick="fetchPokemon('hypno')">Hypno</li>
+        </ul>
+    </div>
+
+    <img id="pokemonSprite" src="" alt="Pokemon Sprite" style="display: none;"> -->
+
+    <!-- <div class="loading">
+        <button id="prevButton" onclick="prev()">Prev</button>
+        <button id="nextButton" onclick="next()">Next</button>
+    </div> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
